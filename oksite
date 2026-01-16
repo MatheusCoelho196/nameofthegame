@@ -1,10 +1,67 @@
 <!DOCTYPE html>
+<!--
+    File: oksite
+    Purpose: Educational landing page about "The 12 Layers of Personality"
+
+    OVERVIEW:
+    This is a Portuguese-language long-form article/landing page that explores
+    Professor Olavo de Carvalho's psychological framework for understanding
+    human personality development through twelve distinct layers or stages.
+
+    STRUCTURE:
+    - HTML5 semantic markup
+    - Embedded CSS (no external stylesheets)
+    - No JavaScript (purely static content)
+    - Single-column responsive layout
+    - Typography-focused design
+
+    CONTENT ORGANIZATION:
+    1. Introduction and hook
+    2. Problem statement
+    3. Presentation of the 12 layers framework
+    4. Detailed description of each layer with associated pain/challenge
+    5. Closing call-to-action and reflection prompts
+
+    TECHNICAL NOTES:
+    - Language: Portuguese (Brazilian variant)
+    - Viewport optimized for mobile and desktop
+    - Accessible design with semantic HTML
+    - Print-friendly styling
+
+    ATTRIBUTION:
+    Based on the theoretical framework developed by Prof. Olavo de Carvalho,
+    Brazilian philosopher and cultural commentator.
+-->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>As 12 Camadas da Personalidade</title>
+
+    <!--
+        EMBEDDED STYLESHEET
+
+        Design Philosophy:
+        - Typography-first approach using classic serif fonts
+        - Minimalist color palette (black, white, grays)
+        - Single-column centered layout for optimal readability
+        - Responsive breakpoints for mobile devices
+        - High contrast for accessibility
+
+        CSS Architecture:
+        The stylesheet is organized into logical sections:
+        1. Reset and base styles
+        2. Typography system (headlines, body text, quotes)
+        3. Layout components (containers, dividers, layers)
+        4. Content blocks (key points, pain descriptions, escape strategies)
+        5. Interactive elements (CTAs, guarantee boxes)
+        6. Responsive media queries
+    -->
     <style>
+        /* ==========================================================================
+           1. RESET & BASE STYLES
+           ========================================================================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -18,12 +75,22 @@
             line-height: 1.7;
         }
 
+        /* ==========================================================================
+           2. LAYOUT COMPONENTS
+           ========================================================================== */
+
+        /* Main container: centers content and provides consistent padding */
         .container {
             max-width: 680px;
             margin: 0 auto;
             padding: 60px 30px;
         }
 
+        /* ==========================================================================
+           3. TYPOGRAPHY SYSTEM
+           ========================================================================== */
+
+        /* Primary headline: large, bold, attention-grabbing */
         .headline {
             font-size: 3.2em;
             font-weight: 700;
@@ -55,6 +122,11 @@
             font-weight: 600;
         }
 
+        /* ==========================================================================
+           4. CONTENT BLOCKS & CALLOUTS
+           ========================================================================== */
+
+        /* Highlighted key point: black box with white text for emphasis */
         .key-point {
             background: #000;
             color: #fff;
@@ -79,6 +151,17 @@
             color: #000;
         }
 
+        /* ==========================================================================
+           5. LAYER COMPONENTS
+           Each of the 12 layers follows this structural pattern:
+           - .layer-number: Small uppercase label (e.g., "CAMADA 1")
+           - .layer-title: Bold title describing the layer
+           - .the-pain: Gray box containing the characteristic pain quote
+           - .layer-body: Main descriptive text
+           - .how-to-escape: Light gray box with guidance (optional)
+           ========================================================================== */
+
+        /* Layer container: provides spacing and visual separation */
         .layer {
             margin-bottom: 50px;
             padding-bottom: 40px;
@@ -101,6 +184,7 @@
             color: #000;
         }
 
+        /* Pain description box: highlights the emotional challenge of each layer */
         .the-pain {
             background: #f8f8f8;
             padding: 25px;
@@ -153,6 +237,11 @@
             color: #2d2d2d;
         }
 
+        /* ==========================================================================
+           6. INTERACTIVE ELEMENTS & CONVERSION COMPONENTS
+           ========================================================================== */
+
+        /* Call-to-action box: black background for high contrast */
         .cta-box {
             background: #000;
             color: #fff;
@@ -173,6 +262,7 @@
             margin-bottom: 15px;
         }
 
+        /* Guarantee/fact box: bordered box for important information */
         .guarantee-box {
             border: 3px solid #000;
             padding: 40px;
@@ -232,6 +322,14 @@
             font-style: italic;
         }
 
+        /* ==========================================================================
+           7. RESPONSIVE DESIGN
+           Mobile-first adjustments for screens under 768px width
+           - Reduced font sizes for better mobile readability
+           - Adjusted padding to maximize screen real estate
+           - Smaller pullquotes and CTA boxes for narrow viewports
+           ========================================================================== */
+
         @media (max-width: 768px) {
             .container {
                 padding: 40px 20px;
@@ -258,12 +356,24 @@
 </head>
 <body>
     <div class="container">
-        
+
+        <!-- =================================================================
+             SECTION 1: PATTERN INTERRUPT
+             Uses a famous advertising headline as a hook to grab attention,
+             then acknowledges the misdirection to create curiosity.
+             ================================================================= -->
+
         <h1 class="headline">At 60 miles an hour, the loudest noise in this Rolls-Royce comes from the electric clock</h1>
         
         <p class="subhead">Desculpe. Título errado. Deixe-me começar de novo.</p>
 
         <hr class="section-divider">
+
+        <!-- =================================================================
+             SECTION 2: PROBLEM STATEMENT
+             Identifies the core problem: recurring patterns of suffering
+             despite attempts at change. Sets up the need for the solution.
+             ================================================================= -->
 
         <h1 class="headline">Por que você continua sofrendo do mesmo jeito — ano após ano?</h1>
         
@@ -292,6 +402,13 @@
 
         <hr class="section-divider">
 
+        <!-- =================================================================
+             SECTION 3: FRAMEWORK INTRODUCTION
+             Introduces the 12 Layers framework and its origin.
+             Provides attribution to Prof. Olavo de Carvalho.
+             Prepares the reader for the detailed layer descriptions.
+             ================================================================= -->
+
         <h2 class="section-head">As 12 Camadas da Personalidade</h2>
 
         <p class="letter-intro">Esta não é uma teoria minha. Foi desenvolvida pelo Prof. Olavo de Carvalho.</p>
@@ -304,10 +421,29 @@
 
         <hr class="section-divider">
 
+        <!-- =================================================================
+             SECTION 4: THE 12 LAYERS (DETAILED DESCRIPTIONS)
+
+             Each layer follows a consistent structure:
+             1. Layer number (.layer-number) - e.g., "Camada 1"
+             2. Layer title (.layer-title) - Name and concept
+             3. Pain description (.the-pain) - The characteristic suffering
+             4. Layer body (.layer-body) - Detailed explanation
+             5. Escape guidance (.how-to-escape) - How to progress (optional)
+
+             The layers progress from basic to transcendent:
+             - Layers 1-4: Physical and social foundations
+             - Layers 5-8: Personal identity and relationships
+             - Layers 9-12: Higher consciousness and transcendence
+
+             LAYER 1: ONTOLOGY (Ontologia)
+             The most primitive layer - basic sense of existence
+             ================================================================= -->
+
         <div class="layer">
             <div class="layer-number">Camada 1</div>
             <div class="layer-title">Ontologia — O corpo que você é</div>
-            
+
             <div class="the-pain">
                 <div class="pain-label">A dor:</div>
                 <div class="pain-quote">"Não me sinto alguém. Há um vazio onde deveria haver um eu."</div>
@@ -577,6 +713,10 @@
             </div>
         </div>
 
+        <!-- LAYER 12: TRANSCENDENCE (Transcendência)
+             The highest layer - spiritual transcendence and sainthood
+             Few people reach this level of development -->
+
         <div class="layer">
             <div class="layer-number">Camada 12</div>
             <div class="layer-title">Transcendência — Diante de Deus</div>
@@ -596,6 +736,17 @@
         </div>
 
         <hr class="section-divider">
+
+        <!-- =================================================================
+             SECTION 5: KEY FACTS & CLOSING REFLECTION
+
+             Provides three important truths about the framework:
+             1. You cannot skip layers in development
+             2. You are not permanently stuck
+             3. Growth requires confronting pain
+
+             Ends with a call to self-reflection and action.
+             ================================================================= -->
 
         <div class="guarantee-box">
             <h3>Três fatos que você precisa aceitar:</h3>
